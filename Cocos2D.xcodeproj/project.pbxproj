@@ -19,6 +19,7 @@
 		9A22447D1851836100C9BA41 /* PauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22447C1851836100C9BA41 /* PauseLayer.m */; };
 		9A2244831851843D00C9BA41 /* QuestionDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2244801851843D00C9BA41 /* QuestionDatabase.m */; };
 		9A2244841851843D00C9BA41 /* QuestionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2244821851843D00C9BA41 /* QuestionDetails.m */; };
+		9A2244891851B54B00C9BA41 /* ChallengeLevelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2244881851B54B00C9BA41 /* ChallengeLevelResult.m */; };
 		9A5F075F184C5A9F00D8059B /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075C184C5A9F00D8059B /* Player.png */; };
 		9A5F0760184C5AA000D8059B /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075D184C5A9F00D8059B /* Projectile.png */; };
 		9A5F0761184C5AA000D8059B /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075E184C5A9F00D8059B /* Target.png */; };
@@ -279,6 +280,8 @@
 		9A2244801851843D00C9BA41 /* QuestionDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDatabase.m; sourceTree = "<group>"; };
 		9A2244811851843D00C9BA41 /* QuestionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetails.h; sourceTree = "<group>"; };
 		9A2244821851843D00C9BA41 /* QuestionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetails.m; sourceTree = "<group>"; };
+		9A2244871851B54B00C9BA41 /* ChallengeLevelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeLevelResult.h; sourceTree = "<group>"; };
+		9A2244881851B54B00C9BA41 /* ChallengeLevelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeLevelResult.m; sourceTree = "<group>"; };
 		9A5F075C184C5A9F00D8059B /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
 		9A5F075D184C5A9F00D8059B /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
 		9A5F075E184C5A9F00D8059B /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
@@ -681,6 +684,7 @@
 		9A22445218517AD500C9BA41 /* GameScenes */ = {
 			isa = PBXGroup;
 			children = (
+				9A2244861851B54B00C9BA41 /* Level Result */,
 				9A22446A18517D9B00C9BA41 /* Challenge Mode Game Scene */,
 				9A22445318517AD500C9BA41 /* About Scene */,
 				9A22445618517AD500C9BA41 /* Start Scene */,
@@ -809,6 +813,15 @@
 				9A2244821851843D00C9BA41 /* QuestionDetails.m */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		9A2244861851B54B00C9BA41 /* Level Result */ = {
+			isa = PBXGroup;
+			children = (
+				9A2244871851B54B00C9BA41 /* ChallengeLevelResult.h */,
+				9A2244881851B54B00C9BA41 /* ChallengeLevelResult.m */,
+			);
+			path = "Level Result";
 			sourceTree = "<group>";
 		};
 		9A5F075B184C5A9F00D8059B /* game */ = {
@@ -1604,6 +1617,7 @@
 				9A22446918517B3F00C9BA41 /* IntroLayer.m in Sources */,
 				9AB85FED184C14410015D1C4 /* main.m in Sources */,
 				9AB85F6B184C14400015D1C4 /* CCTouchHandler.m in Sources */,
+				9A2244891851B54B00C9BA41 /* ChallengeLevelResult.m in Sources */,
 				9A22445A18517AD500C9BA41 /* StartGameScene.m in Sources */,
 				9AB85EE5184C14400015D1C4 /* CCMotionStreak.m in Sources */,
 				9AB85F64184C14400015D1C4 /* CCGLView.m in Sources */,

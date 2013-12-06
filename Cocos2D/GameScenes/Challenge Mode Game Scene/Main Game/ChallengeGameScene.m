@@ -181,7 +181,7 @@
 }
 
 
-//选中答案1的菜单项
+//answer A
 -(void)answerMenuItem1Selected{
     selectedAnswerIndex = 1;
     answerMenuItem1Selected = YES;
@@ -197,7 +197,7 @@
     [self judgeCorrectOrWrong];
 }
 
-//选中答案2的菜单项
+//answer B
 -(void)answerMenuItem2Selected{
     selectedAnswerIndex = 2;
     answerMenuItem2Selected = YES;
@@ -214,7 +214,7 @@
     [self judgeCorrectOrWrong];
 }
 
-//选中答案3的菜单项
+//answer C
 -(void)answerMenuItem3Selected {
     selectedAnswerIndex = 3;
     answerMenuItem3Selected = YES;
@@ -272,9 +272,6 @@
     
     //如果剩余时间少于1，则当前题目失败，并跳转到下一题目
     if(leftTimeForThisQuestion <1) {
-        [[SimpleAudioEngine sharedEngine]playEffect:@"wrong.wav"];
-        CCLOG(@"当前题目失败，进行相关处理，并跳转到下一题目");
-    
         numberOfAnsweredQuestions ++;
         numberOfWrongAnswers ++;
         userLife --;
@@ -384,45 +381,24 @@
 
 #pragma mark- question detail
 -(void)loadQuestionDetails {
-    
     screenSize = [CCDirector sharedDirector].winSize;
     CGSize questionTitleSize = CGSizeMake(screenSize.width*0.6, screenSize.height*0.29);
     
-    if (preciseDetails != nil)
-    {
-        
-        //中央对齐，自动换行
-        
+    if (preciseDetails != nil) {
         questionTitle = [CCLabelTTF labelWithString:preciseDetails.title fontName:@"ChalkboardSE-Bold" fontSize:28 dimensions:questionTitleSize hAlignment:kCCTextAlignmentLeft   vAlignment:kCCVerticalTextAlignmentCenter lineBreakMode:UILineBreakModeWordWrap];
-        
     }
-    else
-    {
-        
+    else {
         questionTitle = [CCLabelTTF labelWithString:@"oops，no more questions :)" fontName:@"ChalkboardSE-Bold" fontSize:28];
-        
     }
-    
-    
-//    questionTitle.visible = NO;
-    
     questionTitle.position = questionLocation;
     
     [self addChild:questionTitle z:3];
-    
-//        [questionTitle runAction:[CCFadeIn actionWithDuration:1.0]];
-    //播放音效
-    [[SimpleAudioEngine sharedEngine]playEffect:@"newtitle.wav"];
-    
-    //  CCLOG(@"正常吗？");
 }
 
 
 
 #pragma mark- load answers
 -(void)loadAnswers {
-    
-    
     if(preciseDetails !=nil){
         
         correctAnswerIndex = (arc4random()%3)+1;
@@ -482,36 +458,20 @@
     
 }
 
-#pragma mark 游戏逻辑判断
-
--(void)judgeCorrectOrWrong{
-    
-    //判断选择的答案是否正确
-    
-    if(selectedAnswerIndex == correctAnswerIndex){
-        
+#pragma mark- judge corrct or wrong
+-(void)judgeCorrectOrWrong {
+    if(selectedAnswerIndex == correctAnswerIndex) {
         isUserCorrect = YES;
         numberOfAnsweredQuestions ++;
         numberOfCorrectAnswers ++;
         
-        
-        
-    }else if(selectedAnswerIndex != correctAnswerIndex){
-        
+    }else if(selectedAnswerIndex != correctAnswerIndex) {
         isUserCorrect = NO;
-        
         numberOfAnsweredQuestions ++;
         numberOfWrongAnswers ++;
         userLife --;
-        
-        
     }
-    
-    
-    //显示结果反馈
-    [self showFeedbackOfCurrentQuestion];
-    
-    
+
     //无论结果如何，需要让游戏延迟0.5秒钟，然后调用游戏结束逻辑
     [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.5],[CCCallFunc actionWithTarget:self selector:@selector(gameLogic)] ,nil]];
     
@@ -592,11 +552,8 @@
     [self updateCartoonAvatar];
     
     if(isUserCorrect == YES){
-        
-        //显示绿色的圈
+        //green circle
         CCSprite *correctCircle = [CCSprite spriteWithFile:@"answercorrect-ipad.png"];
-
-            
             if(selectedAnswerIndex ==1){
                 correctCircle.position = answer1IndexLocation;
             }else if(selectedAnswerIndex ==2){
@@ -604,19 +561,10 @@
             }else if(selectedAnswerIndex ==3){
                 correctCircle.position = answer3IndexLocation;
             }
-
         
         [self addChild:correctCircle z:4];
-        
-        
-        //播放音效
-        [[SimpleAudioEngine sharedEngine]playEffect:@"right.wav"];
-        
-        
     }else if(isUserCorrect == NO){
-        
-        //显示红色的圈
-        
+        //red circle
         CCSprite *wrongCircle = [CCSprite spriteWithFile:@"answerwrong-ipad.png"];
         
         if(selectedAnswerIndex ==1){
@@ -627,11 +575,6 @@
             wrongCircle.position = answer3IndexLocation;
         }
         [self addChild:wrongCircle z:4];
-        //播放音效
-        [[SimpleAudioEngine sharedEngine]playEffect:@"wrong.wav"];
-        
-
-        
     }
   
     

@@ -19,7 +19,7 @@
 //#import "MoreApps.h"
 #import "ChallengeLevelSelection.h"
 #import "ChallengeGameScene.h"
-//#import "ChallengeLevelResult.h"
+#import "ChallengeLevelResult.h"
 //#import "ChallengeFinalResult.h"
 
 //#import "CrazyModeGuide.h"
@@ -71,7 +71,10 @@
     [SceneManager go:[ChallengeGameScene node]];
 }
 
-#pragma mark 类方法
++(void) gochallengeLevelResult {
+    [SceneManager go:[ChallengeLevelResult node]];
+}
+
 
 +(CCScene *) wrap: (CCLayer *) layer {
     CCScene *newScene = [CCScene node];
