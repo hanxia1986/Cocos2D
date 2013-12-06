@@ -10,16 +10,11 @@
 #import "cocos2d.h"
 
 @interface AboutUs : CCLayer {
-    
-    
     double curTime;
     double nextTime;
-    
     CGPoint backMenuLocation;
-    
     CCMenuItemImage* backButton;
-    
-     CCSprite *bg;
+    CCSprite *bg;
 }
 +(CCScene *) scene;
 

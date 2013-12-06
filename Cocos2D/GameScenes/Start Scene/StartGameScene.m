@@ -55,7 +55,7 @@
     aboutItem = [CCMenuItemImage itemWithNormalImage:@"button_aboutus-ipad.png" selectedImage:nil target:self selector:@selector(aboutItemClick)];
     aboutItem.position =aboutMenuLocation;
     
-    //menu item
+    //CCMenu:Layer
     CCMenu *menu =[CCMenu menuWithItems:aboutItem, nil];
     menu.position = CGPointZero;
     [self addChild:menu z:2];
@@ -64,7 +64,7 @@
 
 #pragma mark - action methods
 - (void)startItemClick {
-
+    [SceneManager goChallengeLevelSelect];
 }
 
 - (void)moreItemClick {

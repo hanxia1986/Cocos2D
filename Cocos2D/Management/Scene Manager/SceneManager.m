@@ -22,30 +22,7 @@
 
 @implementation SceneManager
 
-/*  ___Template___________________________________
- 
- Step 3 - Add implementation to call scene
- ______________________________________________
- 
- 
- +(void) goSceneName {
- [SceneManager go:[SceneName node]];
- }
- 
- */
-
-#pragma mark 切换场景
-
-+(void) goStartGame {
-    [SceneManager go:[StartGameScene node]];
-}
-
-
-+(void) goAboutUs{
-    
-    [SceneManager go:[AboutUs node]];
-}
-
+#pragma mark- switch scene
 +(void) go: (CCLayer *) layer {
     CCDirector *director = [CCDirector sharedDirector];
     CCScene *newScene = [SceneManager wrap:layer];
@@ -62,6 +39,18 @@
     }
 }
 
++(void) goStartGame {
+    [SceneManager go:[StartGameScene node]];
+}
+
+
++(void) goAboutUs{
+    [SceneManager go:[AboutUs node]];
+}
+
++(void) goChallengeLevelSelect {
+    [SceneManager go:[ChallengeLevelSelection node]];
+}
 
 #pragma mark 类方法
 

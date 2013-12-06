@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A22445918517AD500C9BA41 /* AboutUs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22445518517AD500C9BA41 /* AboutUs.m */; };
+		9A22445A18517AD500C9BA41 /* StartGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22445818517AD500C9BA41 /* StartGameScene.m */; };
+		9A22445F18517B0300C9BA41 /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22445E18517B0300C9BA41 /* SceneManager.m */; };
+		9A22446718517B3F00C9BA41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446218517B3F00C9BA41 /* AppDelegate.m */; };
+		9A22446818517B3F00C9BA41 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446418517B3F00C9BA41 /* HelloWorldLayer.m */; };
+		9A22446918517B3F00C9BA41 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446618517B3F00C9BA41 /* IntroLayer.m */; };
 		9A5F075F184C5A9F00D8059B /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075C184C5A9F00D8059B /* Player.png */; };
 		9A5F0760184C5AA000D8059B /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075D184C5A9F00D8059B /* Projectile.png */; };
 		9A5F0761184C5AA000D8059B /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075E184C5A9F00D8059B /* Target.png */; };
@@ -141,9 +147,6 @@
 		9AB85FE6184C14410015D1C4 /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AB85FE5184C14410015D1C4 /* vec3.c */; };
 		9AB85FE8184C14410015D1C4 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AB85FE7184C14410015D1C4 /* vec4.c */; };
 		9AB85FED184C14410015D1C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB85FEC184C14410015D1C4 /* main.m */; };
-		9AB85FF0184C14410015D1C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB85FEF184C14410015D1C4 /* AppDelegate.m */; };
-		9AB85FF3184C14410015D1C4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB85FF2184C14410015D1C4 /* HelloWorldLayer.m */; };
-		9AB85FF6184C14410015D1C4 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB85FF5184C14410015D1C4 /* IntroLayer.m */; };
 		9AEF90DC185073AE0043517C /* 0star-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AEF907A185073AE0043517C /* 0star-ipad.png */; };
 		9AEF90DD185073AE0043517C /* 0star-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AEF907B185073AE0043517C /* 0star-ipadhd.png */; };
 		9AEF90DE185073AE0043517C /* 1star-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AEF907C185073AE0043517C /* 1star-ipad.png */; };
@@ -242,12 +245,21 @@
 		9AEF913B185073AE0043517C /* soundtoys-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AEF90D9185073AE0043517C /* soundtoys-ipadhd.png */; };
 		9AEF913C185073AE0043517C /* thinkingface-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AEF90DA185073AE0043517C /* thinkingface-ipad.png */; };
 		9AEF913D185073AE0043517C /* thinkingface-ipadhd.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AEF90DB185073AE0043517C /* thinkingface-ipadhd.png */; };
-		9AEF9142185074280043517C /* StartGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEF9141185074280043517C /* StartGameScene.m */; };
-		9AEF914818507AEF0043517C /* AboutUs.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEF914718507AEF0043517C /* AboutUs.m */; };
-		9AEF914C18507BA00043517C /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEF914B18507BA00043517C /* SceneManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A22445418517AD500C9BA41 /* AboutUs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUs.h; sourceTree = "<group>"; };
+		9A22445518517AD500C9BA41 /* AboutUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUs.m; sourceTree = "<group>"; };
+		9A22445718517AD500C9BA41 /* StartGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameScene.h; sourceTree = "<group>"; };
+		9A22445818517AD500C9BA41 /* StartGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameScene.m; sourceTree = "<group>"; };
+		9A22445D18517B0300C9BA41 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		9A22445E18517B0300C9BA41 /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
+		9A22446118517B3F00C9BA41 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9A22446218517B3F00C9BA41 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9A22446318517B3F00C9BA41 /* HelloWorldLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
+		9A22446418517B3F00C9BA41 /* HelloWorldLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		9A22446518517B3F00C9BA41 /* IntroLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
+		9A22446618517B3F00C9BA41 /* IntroLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		9A5F075C184C5A9F00D8059B /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
 		9A5F075D184C5A9F00D8059B /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
 		9A5F075E184C5A9F00D8059B /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
@@ -526,12 +538,6 @@
 		9AB85FE9184C14410015D1C4 /* LICENSE_Kazmath.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE_Kazmath.txt; path = libs/LICENSE_Kazmath.txt; sourceTree = "<group>"; };
 		9AB85FEB184C14410015D1C4 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		9AB85FEC184C14410015D1C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9AB85FEE184C14410015D1C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9AB85FEF184C14410015D1C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9AB85FF1184C14410015D1C4 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		9AB85FF2184C14410015D1C4 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		9AB85FF4184C14410015D1C4 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		9AB85FF5184C14410015D1C4 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		9AEF907A185073AE0043517C /* 0star-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0star-ipad.png"; sourceTree = "<group>"; };
 		9AEF907B185073AE0043517C /* 0star-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0star-ipadhd.png"; sourceTree = "<group>"; };
 		9AEF907C185073AE0043517C /* 1star-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1star-ipad.png"; sourceTree = "<group>"; };
@@ -630,12 +636,6 @@
 		9AEF90D9185073AE0043517C /* soundtoys-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "soundtoys-ipadhd.png"; sourceTree = "<group>"; };
 		9AEF90DA185073AE0043517C /* thinkingface-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thinkingface-ipad.png"; sourceTree = "<group>"; };
 		9AEF90DB185073AE0043517C /* thinkingface-ipadhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thinkingface-ipadhd.png"; sourceTree = "<group>"; };
-		9AEF9140185074280043517C /* StartGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameScene.h; sourceTree = "<group>"; };
-		9AEF9141185074280043517C /* StartGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameScene.m; sourceTree = "<group>"; };
-		9AEF914618507AEF0043517C /* AboutUs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUs.h; sourceTree = "<group>"; };
-		9AEF914718507AEF0043517C /* AboutUs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUs.m; sourceTree = "<group>"; };
-		9AEF914A18507BA00043517C /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
-		9AEF914B18507BA00043517C /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,6 +659,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A22445218517AD500C9BA41 /* GameScenes */ = {
+			isa = PBXGroup;
+			children = (
+				9A22445318517AD500C9BA41 /* About Scene */,
+				9A22445618517AD500C9BA41 /* Start Scene */,
+			);
+			path = GameScenes;
+			sourceTree = "<group>";
+		};
+		9A22445318517AD500C9BA41 /* About Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9A22445418517AD500C9BA41 /* AboutUs.h */,
+				9A22445518517AD500C9BA41 /* AboutUs.m */,
+			);
+			path = "About Scene";
+			sourceTree = "<group>";
+		};
+		9A22445618517AD500C9BA41 /* Start Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9A22445718517AD500C9BA41 /* StartGameScene.h */,
+				9A22445818517AD500C9BA41 /* StartGameScene.m */,
+			);
+			path = "Start Scene";
+			sourceTree = "<group>";
+		};
+		9A22445B18517B0300C9BA41 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				9A22445C18517B0300C9BA41 /* Scene Manager */,
+			);
+			path = Management;
+			sourceTree = "<group>";
+		};
+		9A22445C18517B0300C9BA41 /* Scene Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9A22445D18517B0300C9BA41 /* SceneManager.h */,
+				9A22445E18517B0300C9BA41 /* SceneManager.m */,
+			);
+			path = "Scene Manager";
+			sourceTree = "<group>";
+		};
+		9A22446018517B3F00C9BA41 /* SystemClass */ = {
+			isa = PBXGroup;
+			children = (
+				9A22446118517B3F00C9BA41 /* AppDelegate.h */,
+				9A22446218517B3F00C9BA41 /* AppDelegate.m */,
+				9A22446318517B3F00C9BA41 /* HelloWorldLayer.h */,
+				9A22446418517B3F00C9BA41 /* HelloWorldLayer.m */,
+				9A22446518517B3F00C9BA41 /* IntroLayer.h */,
+				9A22446618517B3F00C9BA41 /* IntroLayer.m */,
+			);
+			path = SystemClass;
+			sourceTree = "<group>";
+		};
 		9A5F075B184C5A9F00D8059B /* game */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,14 +764,9 @@
 		9AB85E5D184C143F0015D1C4 /* Cocos2D */ = {
 			isa = PBXGroup;
 			children = (
-				9AEF914418507A7A0043517C /* Scene */,
-				9AEF914318507A630043517C /* Management */,
-				9AB85FEE184C14410015D1C4 /* AppDelegate.h */,
-				9AB85FEF184C14410015D1C4 /* AppDelegate.m */,
-				9AB85FF1184C14410015D1C4 /* HelloWorldLayer.h */,
-				9AB85FF2184C14410015D1C4 /* HelloWorldLayer.m */,
-				9AB85FF4184C14410015D1C4 /* IntroLayer.h */,
-				9AB85FF5184C14410015D1C4 /* IntroLayer.m */,
+				9A22446018517B3F00C9BA41 /* SystemClass */,
+				9A22445B18517B0300C9BA41 /* Management */,
+				9A22445218517AD500C9BA41 /* GameScenes */,
 				9AB85E5E184C143F0015D1C4 /* Resources */,
 				9AB85E76184C143F0015D1C4 /* libs */,
 				9AB85FEA184C14410015D1C4 /* Supporting Files */,
@@ -1211,50 +1263,6 @@
 			path = Resources/Items;
 			sourceTree = "<group>";
 		};
-		9AEF913F185074280043517C /* Start Scene */ = {
-			isa = PBXGroup;
-			children = (
-				9AEF9140185074280043517C /* StartGameScene.h */,
-				9AEF9141185074280043517C /* StartGameScene.m */,
-			);
-			path = "Start Scene";
-			sourceTree = "<group>";
-		};
-		9AEF914318507A630043517C /* Management */ = {
-			isa = PBXGroup;
-			children = (
-				9AEF914918507BA00043517C /* Scene Manager */,
-			);
-			name = Management;
-			sourceTree = "<group>";
-		};
-		9AEF914418507A7A0043517C /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				9AEF914518507AD30043517C /* About Scene */,
-				9AEF913F185074280043517C /* Start Scene */,
-			);
-			name = Scene;
-			sourceTree = "<group>";
-		};
-		9AEF914518507AD30043517C /* About Scene */ = {
-			isa = PBXGroup;
-			children = (
-				9AEF914618507AEF0043517C /* AboutUs.h */,
-				9AEF914718507AEF0043517C /* AboutUs.m */,
-			);
-			path = "About Scene";
-			sourceTree = "<group>";
-		};
-		9AEF914918507BA00043517C /* Scene Manager */ = {
-			isa = PBXGroup;
-			children = (
-				9AEF914A18507BA00043517C /* SceneManager.h */,
-				9AEF914B18507BA00043517C /* SceneManager.m */,
-			);
-			path = "Scene Manager";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1432,8 +1440,9 @@
 				9AB85F3A184C14400015D1C4 /* CCTexturePVR.m in Sources */,
 				9AB85F8A184C14400015D1C4 /* ccUtils.c in Sources */,
 				9AB85EDB184C14400015D1C4 /* CCLayer.m in Sources */,
-				9AEF914818507AEF0043517C /* AboutUs.m in Sources */,
+				9A22445918517AD500C9BA41 /* AboutUs.m in Sources */,
 				9AB85F3D184C14400015D1C4 /* CCTileMapAtlas.m in Sources */,
+				9A22446818517B3F00C9BA41 /* HelloWorldLayer.m in Sources */,
 				9AB85F40184C14400015D1C4 /* CCTMXLayer.m in Sources */,
 				9AB85FD8184C14410015D1C4 /* mat4.c in Sources */,
 				9AB85EB4184C143F0015D1C4 /* ccDeprecated.m in Sources */,
@@ -1474,16 +1483,13 @@
 				9AB85F25184C14400015D1C4 /* CCSprite.m in Sources */,
 				9AB85ECC184C143F0015D1C4 /* CCGrabber.m in Sources */,
 				9AB85FD6184C14410015D1C4 /* mat3.c in Sources */,
-				9AB85FF0184C14410015D1C4 /* AppDelegate.m in Sources */,
 				9AB85F60184C14400015D1C4 /* CCES2Renderer.m in Sources */,
 				9AB85ED2184C14400015D1C4 /* CCLabelAtlas.m in Sources */,
 				9AB85EEE184C14400015D1C4 /* CCParallaxNode.m in Sources */,
-				9AB85FF6184C14410015D1C4 /* IntroLayer.m in Sources */,
 				9AB85E86184C143F0015D1C4 /* CCActionGrid.m in Sources */,
 				9AB85ECF184C14400015D1C4 /* CCGrid.m in Sources */,
 				9AB85FDE184C14410015D1C4 /* quaternion.c in Sources */,
 				9AB85F2B184C14400015D1C4 /* CCSpriteFrame.m in Sources */,
-				9AEF9142185074280043517C /* StartGameScene.m in Sources */,
 				9AB85E98184C143F0015D1C4 /* CCActionProgressTimer.m in Sources */,
 				9AB85E7A184C143F0015D1C4 /* CCAction.m in Sources */,
 				9AB85FB2184C14410015D1C4 /* CocosDenshion.m in Sources */,
@@ -1495,8 +1501,10 @@
 				9AB85F2E184C14400015D1C4 /* CCSpriteFrameCache.m in Sources */,
 				9AB85EB7184C143F0015D1C4 /* CCDirector.m in Sources */,
 				9AB85EA7184C143F0015D1C4 /* CCAtlasNode.m in Sources */,
+				9A22446918517B3F00C9BA41 /* IntroLayer.m in Sources */,
 				9AB85FED184C14410015D1C4 /* main.m in Sources */,
 				9AB85F6B184C14400015D1C4 /* CCTouchHandler.m in Sources */,
+				9A22445A18517AD500C9BA41 /* StartGameScene.m in Sources */,
 				9AB85EE5184C14400015D1C4 /* CCMotionStreak.m in Sources */,
 				9AB85F64184C14400015D1C4 /* CCGLView.m in Sources */,
 				9AB85F91184C14400015D1C4 /* CGPointExtension.m in Sources */,
@@ -1522,9 +1530,9 @@
 				9AB85F00184C14400015D1C4 /* CCPhysicsSprite.mm in Sources */,
 				9AB85FE4184C14410015D1C4 /* vec2.c in Sources */,
 				9AB85FD4184C14410015D1C4 /* matrix.c in Sources */,
+				9A22446718517B3F00C9BA41 /* AppDelegate.m in Sources */,
 				9AB85EBA184C143F0015D1C4 /* CCDrawingPrimitives.m in Sources */,
 				9AB85F22184C14400015D1C4 /* ccShaders.m in Sources */,
-				9AB85FF3184C14410015D1C4 /* HelloWorldLayer.m in Sources */,
 				9AB85F78184C14400015D1C4 /* CCWindow.m in Sources */,
 				9AB85F56184C14400015D1C4 /* cocos2d.m in Sources */,
 				9AB85F03184C14400015D1C4 /* CCProgressTimer.m in Sources */,
@@ -1537,7 +1545,7 @@
 				9AB85F5D184C14400015D1C4 /* CCDirectorIOS.m in Sources */,
 				9AB85EDF184C14400015D1C4 /* CCMenu.m in Sources */,
 				9AB85FE8184C14410015D1C4 /* vec4.c in Sources */,
-				9AEF914C18507BA00043517C /* SceneManager.m in Sources */,
+				9A22445F18517B0300C9BA41 /* SceneManager.m in Sources */,
 				9AB85EAA184C143F0015D1C4 /* CCCamera.m in Sources */,
 				9AB85EA4184C143F0015D1C4 /* CCAnimationCache.m in Sources */,
 				9AB85EC6184C143F0015D1C4 /* CCGLProgram.m in Sources */,
