@@ -13,6 +13,12 @@
 		9A22446718517B3F00C9BA41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446218517B3F00C9BA41 /* AppDelegate.m */; };
 		9A22446818517B3F00C9BA41 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446418517B3F00C9BA41 /* HelloWorldLayer.m */; };
 		9A22446918517B3F00C9BA41 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446618517B3F00C9BA41 /* IntroLayer.m */; };
+		9A22446E18517D9B00C9BA41 /* ChallengeLevelSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22446D18517D9B00C9BA41 /* ChallengeLevelSelection.m */; };
+		9A22447518517FD000C9BA41 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22447418517FD000C9BA41 /* GameData.m */; };
+		9A224479185182F200C9BA41 /* ChallengeGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A224478185182F200C9BA41 /* ChallengeGameScene.m */; };
+		9A22447D1851836100C9BA41 /* PauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A22447C1851836100C9BA41 /* PauseLayer.m */; };
+		9A2244831851843D00C9BA41 /* QuestionDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2244801851843D00C9BA41 /* QuestionDatabase.m */; };
+		9A2244841851843D00C9BA41 /* QuestionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2244821851843D00C9BA41 /* QuestionDetails.m */; };
 		9A5F075F184C5A9F00D8059B /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075C184C5A9F00D8059B /* Player.png */; };
 		9A5F0760184C5AA000D8059B /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075D184C5A9F00D8059B /* Projectile.png */; };
 		9A5F0761184C5AA000D8059B /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075E184C5A9F00D8059B /* Target.png */; };
@@ -260,6 +266,19 @@
 		9A22446418517B3F00C9BA41 /* HelloWorldLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		9A22446518517B3F00C9BA41 /* IntroLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		9A22446618517B3F00C9BA41 /* IntroLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		9A22446C18517D9B00C9BA41 /* ChallengeLevelSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeLevelSelection.h; sourceTree = "<group>"; };
+		9A22446D18517D9B00C9BA41 /* ChallengeLevelSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeLevelSelection.m; sourceTree = "<group>"; };
+		9A22447118517E8C00C9BA41 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9A22447318517FD000C9BA41 /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
+		9A22447418517FD000C9BA41 /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
+		9A224477185182F200C9BA41 /* ChallengeGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeGameScene.h; sourceTree = "<group>"; };
+		9A224478185182F200C9BA41 /* ChallengeGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeGameScene.m; sourceTree = "<group>"; };
+		9A22447B1851836100C9BA41 /* PauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseLayer.h; sourceTree = "<group>"; };
+		9A22447C1851836100C9BA41 /* PauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseLayer.m; sourceTree = "<group>"; };
+		9A22447F1851843D00C9BA41 /* QuestionDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDatabase.h; sourceTree = "<group>"; };
+		9A2244801851843D00C9BA41 /* QuestionDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDatabase.m; sourceTree = "<group>"; };
+		9A2244811851843D00C9BA41 /* QuestionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetails.h; sourceTree = "<group>"; };
+		9A2244821851843D00C9BA41 /* QuestionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetails.m; sourceTree = "<group>"; };
 		9A5F075C184C5A9F00D8059B /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
 		9A5F075D184C5A9F00D8059B /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
 		9A5F075E184C5A9F00D8059B /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
@@ -662,6 +681,7 @@
 		9A22445218517AD500C9BA41 /* GameScenes */ = {
 			isa = PBXGroup;
 			children = (
+				9A22446A18517D9B00C9BA41 /* Challenge Mode Game Scene */,
 				9A22445318517AD500C9BA41 /* About Scene */,
 				9A22445618517AD500C9BA41 /* Start Scene */,
 			);
@@ -716,6 +736,81 @@
 			path = SystemClass;
 			sourceTree = "<group>";
 		};
+		9A22446A18517D9B00C9BA41 /* Challenge Mode Game Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9A22447A1851836100C9BA41 /* Pause Layer */,
+				9A224476185182F200C9BA41 /* Main Game */,
+				9A22446B18517D9B00C9BA41 /* Level Selection */,
+			);
+			path = "Challenge Mode Game Scene";
+			sourceTree = "<group>";
+		};
+		9A22446B18517D9B00C9BA41 /* Level Selection */ = {
+			isa = PBXGroup;
+			children = (
+				9A22446C18517D9B00C9BA41 /* ChallengeLevelSelection.h */,
+				9A22446D18517D9B00C9BA41 /* ChallengeLevelSelection.m */,
+			);
+			path = "Level Selection";
+			sourceTree = "<group>";
+		};
+		9A22446F18517E8C00C9BA41 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A22447E1851843D00C9BA41 /* Database */,
+				9A22447218517FD000C9BA41 /* Game Data */,
+				9A22447018517E8C00C9BA41 /* Constants */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		9A22447018517E8C00C9BA41 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9A22447118517E8C00C9BA41 /* Constants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9A22447218517FD000C9BA41 /* Game Data */ = {
+			isa = PBXGroup;
+			children = (
+				9A22447318517FD000C9BA41 /* GameData.h */,
+				9A22447418517FD000C9BA41 /* GameData.m */,
+			);
+			path = "Game Data";
+			sourceTree = "<group>";
+		};
+		9A224476185182F200C9BA41 /* Main Game */ = {
+			isa = PBXGroup;
+			children = (
+				9A224477185182F200C9BA41 /* ChallengeGameScene.h */,
+				9A224478185182F200C9BA41 /* ChallengeGameScene.m */,
+			);
+			path = "Main Game";
+			sourceTree = "<group>";
+		};
+		9A22447A1851836100C9BA41 /* Pause Layer */ = {
+			isa = PBXGroup;
+			children = (
+				9A22447B1851836100C9BA41 /* PauseLayer.h */,
+				9A22447C1851836100C9BA41 /* PauseLayer.m */,
+			);
+			path = "Pause Layer";
+			sourceTree = "<group>";
+		};
+		9A22447E1851843D00C9BA41 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9A22447F1851843D00C9BA41 /* QuestionDatabase.h */,
+				9A2244801851843D00C9BA41 /* QuestionDatabase.m */,
+				9A2244811851843D00C9BA41 /* QuestionDetails.h */,
+				9A2244821851843D00C9BA41 /* QuestionDetails.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		9A5F075B184C5A9F00D8059B /* game */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,6 +859,7 @@
 		9AB85E5D184C143F0015D1C4 /* Cocos2D */ = {
 			isa = PBXGroup;
 			children = (
+				9A22446F18517E8C00C9BA41 /* Data Model */,
 				9A22446018517B3F00C9BA41 /* SystemClass */,
 				9A22445B18517B0300C9BA41 /* Management */,
 				9A22445218517AD500C9BA41 /* GameScenes */,
@@ -1463,7 +1559,9 @@
 				9AB85EFA184C14400015D1C4 /* CCParticleSystemQuad.m in Sources */,
 				9AB85EBD184C143F0015D1C4 /* CCDrawNode.m in Sources */,
 				9AB85F4F184C14400015D1C4 /* CCTransitionPageTurn.m in Sources */,
+				9A2244831851843D00C9BA41 /* QuestionDatabase.m in Sources */,
 				9AB85E80184C143F0015D1C4 /* CCActionCatmullRom.m in Sources */,
+				9A2244841851843D00C9BA41 /* QuestionDetails.m in Sources */,
 				9AB85EF7184C14400015D1C4 /* CCParticleSystem.m in Sources */,
 				9AB85F4C184C14400015D1C4 /* CCTransition.m in Sources */,
 				9AB85EF4184C14400015D1C4 /* CCParticleExamples.m in Sources */,
@@ -1488,6 +1586,7 @@
 				9AB85EEE184C14400015D1C4 /* CCParallaxNode.m in Sources */,
 				9AB85E86184C143F0015D1C4 /* CCActionGrid.m in Sources */,
 				9AB85ECF184C14400015D1C4 /* CCGrid.m in Sources */,
+				9A22447D1851836100C9BA41 /* PauseLayer.m in Sources */,
 				9AB85FDE184C14410015D1C4 /* quaternion.c in Sources */,
 				9AB85F2B184C14400015D1C4 /* CCSpriteFrame.m in Sources */,
 				9AB85E98184C143F0015D1C4 /* CCActionProgressTimer.m in Sources */,
@@ -1500,6 +1599,7 @@
 				9AB85FD2184C14410015D1C4 /* mat4stack.c in Sources */,
 				9AB85F2E184C14400015D1C4 /* CCSpriteFrameCache.m in Sources */,
 				9AB85EB7184C143F0015D1C4 /* CCDirector.m in Sources */,
+				9A22447518517FD000C9BA41 /* GameData.m in Sources */,
 				9AB85EA7184C143F0015D1C4 /* CCAtlasNode.m in Sources */,
 				9A22446918517B3F00C9BA41 /* IntroLayer.m in Sources */,
 				9AB85FED184C14410015D1C4 /* main.m in Sources */,
@@ -1518,6 +1618,7 @@
 				9AB85F52184C14400015D1C4 /* CCTransitionProgress.m in Sources */,
 				9AB85F75184C14400015D1C4 /* CCGLView.m in Sources */,
 				9AB85FA9184C14410015D1C4 /* CDOpenALSupport.m in Sources */,
+				9A22446E18517D9B00C9BA41 /* ChallengeLevelSelection.m in Sources */,
 				9AB85E8C184C143F0015D1C4 /* CCActionInstant.m in Sources */,
 				9AB85EAD184C143F0015D1C4 /* CCClippingNode.m in Sources */,
 				9AB85F31184C14400015D1C4 /* CCTexture2D.m in Sources */,
@@ -1531,6 +1632,7 @@
 				9AB85FE4184C14410015D1C4 /* vec2.c in Sources */,
 				9AB85FD4184C14410015D1C4 /* matrix.c in Sources */,
 				9A22446718517B3F00C9BA41 /* AppDelegate.m in Sources */,
+				9A224479185182F200C9BA41 /* ChallengeGameScene.m in Sources */,
 				9AB85EBA184C143F0015D1C4 /* CCDrawingPrimitives.m in Sources */,
 				9AB85F22184C14400015D1C4 /* ccShaders.m in Sources */,
 				9AB85F78184C14400015D1C4 /* CCWindow.m in Sources */,

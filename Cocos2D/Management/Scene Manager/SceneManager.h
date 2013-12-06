@@ -13,35 +13,6 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-/*  ___Template___________________________________
- 
- Step 1 - Import header of your SceneName
- ______________________________________________
- 
- #import "SceneName.h"
- 
- */
-#import "StartGameScene.h"
-
-//#import "GameSetting.h"
-//#import "GameHelp.h"
-#import "AboutUs.h"
-//#import "MoreApps.h"
-//
-//#import "ChallengeLevelSelection.h"
-//#import "ChallengeGameScene.h"
-//#import "ChallengeLevelResult.h"
-//#import "ChallengeFinalResult.h"
-//
-//#import "CrazyModeGuide.h"
-//#import "CrazyModeGameScene.h"
-//#import "CrazyModeResultScene.h"
-//
-//#import "GameStore.h"
-
-
-
-
 @interface SceneManager : NSObject {
     
 }

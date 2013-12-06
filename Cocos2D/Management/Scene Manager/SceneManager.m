@@ -12,6 +12,21 @@
 
 #import "SceneManager.h"
 
+#import "StartGameScene.h"
+//#import "GameSetting.h"
+//#import "GameHelp.h"
+#import "AboutUs.h"
+//#import "MoreApps.h"
+#import "ChallengeLevelSelection.h"
+#import "ChallengeGameScene.h"
+//#import "ChallengeLevelResult.h"
+//#import "ChallengeFinalResult.h"
+
+//#import "CrazyModeGuide.h"
+//#import "CrazyModeGameScene.h"
+//#import "CrazyModeResultScene.h"
+
+//#import "GameStore.h"
 
 @interface SceneManager ()
 
@@ -50,6 +65,10 @@
 
 +(void) goChallengeLevelSelect {
     [SceneManager go:[ChallengeLevelSelection node]];
+}
+
++(void) goChallengeGameScene {
+    [SceneManager go:[ChallengeGameScene node]];
 }
 
 #pragma mark 类方法
