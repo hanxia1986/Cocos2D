@@ -105,7 +105,6 @@
 }
 
 -(void)addCartoonAvatar {
-    
     thinkingface = [CCSprite spriteWithFile:@"thinkingface-ipad.png"];
     thinkingface.position = happyBubsySpritePosition;
     [self addChild:thinkingface z:2];
@@ -403,32 +402,41 @@
         
         correctAnswerIndex = (arc4random()%3)+1;
         
-        if(correctAnswerIndex ==1){
+        if(correctAnswerIndex ==1) {
             
             possibleAnswer1 = [CCLabelTTF labelWithString:preciseDetails.correctAnswer fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(430, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer1.color = ccc3(0, 0, 0);
             
             possibleAnswer2 = [CCLabelTTF labelWithString:preciseDetails.possibleAnswer2 fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(430, 80) hAlignment:UITextAlignmentLeft  vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer2.color = ccc3(0, 154, 224);
             
             possibleAnswer3 = [CCLabelTTF labelWithString:preciseDetails.possibleAnswer3 fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(430, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer3.color = ccc3(0, 154, 224);
             
             
         }
         else if(correctAnswerIndex ==2){
             
             possibleAnswer1 = [CCLabelTTF labelWithString:preciseDetails.possibleAnswer2 fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(430, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer1.color = ccc3(0, 154, 224);
             
             possibleAnswer2 = [CCLabelTTF labelWithString:preciseDetails.correctAnswer fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(430, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer2.color = ccc3(0, 0, 0);
             
             possibleAnswer3 = [CCLabelTTF labelWithString:preciseDetails.possibleAnswer3 fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(430, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer3.color = ccc3(0, 154, 224);
             
         }
         else if(correctAnswerIndex ==3){
             
             possibleAnswer1 = [CCLabelTTF labelWithString:preciseDetails.possibleAnswer3 fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(480, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer1.color = ccc3(0, 154, 224);
             
             possibleAnswer2 = [CCLabelTTF labelWithString:preciseDetails.possibleAnswer2 fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(480, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer2.color = ccc3(0, 154, 224);
             
             possibleAnswer3 = [CCLabelTTF labelWithString:preciseDetails.correctAnswer fontName:@"ChalkboardSE-Bold" fontSize:16 dimensions:CGSizeMake(480, 80) hAlignment:UITextAlignmentLeft vAlignment:UITextAlignmentCenter lineBreakMode:UILineBreakModeCharacterWrap];
+            possibleAnswer3.color = ccc3(0, 0, 0);
             
         }
         
@@ -447,9 +455,9 @@
     possibleAnswer2.position = answer2Location;
     possibleAnswer3.position = answer3Location;
     
-    possibleAnswer1.color = ccc3(0, 154, 224);
-    possibleAnswer2.color = ccc3(0, 154, 224);
-    possibleAnswer3.color = ccc3(0, 154, 224);
+//    possibleAnswer1.color = ccc3(0, 154, 224);
+//    possibleAnswer2.color = ccc3(0, 154, 224);
+//    possibleAnswer3.color = ccc3(0, 154, 224);
     
     [self addChild:possibleAnswer1 z:5];
     [self addChild:possibleAnswer2 z:5];
@@ -691,37 +699,13 @@
 }
 
 
-#pragma mark 检测摇晃事件并进行处理
-
--(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
-    
-    float THRESHOLD = 2;
-    if (acceleration.x > THRESHOLD || acceleration.x < -THRESHOLD ||
-        acceleration.y > THRESHOLD || acceleration.y < -THRESHOLD ||
-        acceleration.z > THRESHOLD || acceleration.z < -THRESHOLD) {
-        
-        if (!shake_once) {
-            //      int derp = 22/7;
-            shake_once = true;
-            
-            //玩家在摇晃屏幕
-            CCLOG(@"玩家在摇晃屏幕");
-            
-            
-            //使用道具2
-
-        }
-        
-    }
-    else {
-        shake_once = false;
-    }
-    
+#pragma mark- PauseLayer Delegate
+-(void)pauseLayerDidPause {
+    NSLog(@"Delegate for Pause Layer:DidPause");
 }
 
-- (void) dealloc {
-	[super dealloc];
+-(void)pauseLayerDidUnpause {
+    NSLog(@"Delegate for Pause Layer:Continue");
 }
-
 
 @end

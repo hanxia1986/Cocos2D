@@ -229,23 +229,9 @@ typedef enum {
     //剩余的问题数量
     int numberOfLeftQuestions;
     
-    NSMutableArray *quizDetails;
-    
-    //是否摇晃
-    bool shake_once;
-    
-
-    
-    //scrolling background
-    
-
-    
     CCSprite *bg;
-    
-
-
-    
 }
+
 +(CCScene*)scene;
 
 @property (nonatomic, assign) int uniqueId;

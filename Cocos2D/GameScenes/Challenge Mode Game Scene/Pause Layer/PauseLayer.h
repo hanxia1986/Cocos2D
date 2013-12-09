@@ -34,7 +34,7 @@
     CCLabelTTF *pauseText1;
     CCLabelTTF *pauseText2;
     
-    CCMenuItemSprite *item1 ;
+    CCMenuItemSprite *item1;
     CCMenuItemSprite *item2;
     CCMenuItemSprite *item3;
     

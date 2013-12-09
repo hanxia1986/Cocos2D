@@ -288,6 +288,7 @@
 		9A5F075E184C5A9F00D8059B /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
 		9A85C0301855548E005A885C /* MoreApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreApps.h; sourceTree = "<group>"; };
 		9A85C0311855548E005A885C /* MoreApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreApps.m; sourceTree = "<group>"; };
+		9A85C0361855753A005A885C /* challenge.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = challenge.sqlite3; sourceTree = "<group>"; };
 		9AB85E46184C143F0015D1C4 /* Cocos2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB85E49184C143F0015D1C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9AB85E4B184C143F0015D1C4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -811,6 +812,7 @@
 		9A22447E1851843D00C9BA41 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				9A85C0361855753A005A885C /* challenge.sqlite3 */,
 				9A22447F1851843D00C9BA41 /* QuestionDatabase.h */,
 				9A2244801851843D00C9BA41 /* QuestionDatabase.m */,
 				9A2244811851843D00C9BA41 /* QuestionDetails.h */,

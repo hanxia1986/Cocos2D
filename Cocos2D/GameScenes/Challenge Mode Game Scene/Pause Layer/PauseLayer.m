@@ -16,32 +16,18 @@
 
 @synthesize delegate;
 
-+ (id) layerWithColor:(ccColor4B)color delegate:(id)_delegate
-
-{
-    
++ (id) layerWithColor:(ccColor4B)color delegate:(id)_delegate {
     return [[[self alloc] initWithColor:color delegate:_delegate] autorelease];
-    
 }
 
 - (id) initWithColor:(ccColor4B)c delegate:(id)_delegate {
-    
     self = [super initWithColor:c];
-    
     if (self != nil) {
-        
-        
         delegate = _delegate;
-        
         [self pauseDelegate];
-        
         [self createPausedMenu];
-//        [self addScrollingBackground];
-//        [self scheduleUpdate];
     }
-    
     return self;
-    
 }
 
 //添加滚动背景
@@ -87,32 +73,24 @@
 //创建暂停画面
 
 -(void)createPausedMenu{
-    
     screenSize = [CCDirector sharedDirector].winSize;
-    
-    
     pauseBg = [CCSprite spriteWithFile:@"rollbg-ipad.png"];
-    //  pauseBg.opacity = 50;
-    
- 
-    //创建文字2
+
+    //Paused text
     pauseText2 = [CCLabelTTF labelWithString:@"Paused" fontName:@"Arial-BoldMT" fontSize:50];
     
-
-    // 创建选择按钮
-    item2 =
-    [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithFile:@"button_backtolevelselection-ipad.png"]
+    //back button
+    item2 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithFile:@"button_backtolevelselection-ipad.png"]
                             selectedSprite:nil
                                     target:self
                                   selector:@selector(backButtonPressed)];
-    // 创建继续按钮
-    item3 =
-    [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithFile:@"button_continue-ipad.png"]
+    //continue button
+    item3 = [CCMenuItemSprite itemWithNormalSprite:[CCSprite spriteWithFile:@"button_continue-ipad.png"]
                             selectedSprite:nil
                                     target:self
                                   selector:@selector(resumeButtonPressed)];
     
-    // put all those three buttons on the menu
+    //put all those buttons on the menu
     pausedMenu = [CCMenu menuWithItems:item2, item3, nil];
     pausedMenu.position = ccp(0,0);
     
@@ -123,93 +101,52 @@
 
     pauseText2.position = ccp(screenSize.width*0.5,screenSize.height*0.74);
     
-    
     // add the Paused sprite and menu to the current layer
     [self addChild:pauseBg z:0];
     [self addChild:pausedMenu z:100];
-
     [self addChild:pauseText2 z:10];
-    
-    
 }
 
--(void)storeButtonPressed{
-    [item1 runAction:[CCRotateBy actionWithDuration:0.5 angle:0]];
-    
-    [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.1],[CCCallFunc actionWithTarget:self selector:@selector(goStore)] ,nil]];
-    
-    
-    
-}
--(void)backButtonPressed{
-    
+-(void)backButtonPressed {
     [item2 runAction:[CCRotateBy actionWithDuration:0.5 angle:0]];
-    
     [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.1],[CCCallFunc actionWithTarget:self selector:@selector(goLevelSelection)] ,nil]];
-    
 }
 
--(void)resumeButtonPressed{
-    
+-(void)resumeButtonPressed {
     [item3 runAction:[CCRotateBy actionWithDuration:0.5 angle:0]];
-    
     [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.1],[CCCallFunc actionWithTarget:self selector:@selector(doResume:)] ,nil]];
-    
 }
 
--(void)resetDatabase{
-    
-    //重置问题总数
+-(void)resetDatabase {
     [GameData sharedData].numberOfUnusedQuestions = TotalNumberOfQuestionInDatabase;
 }
 
 -(void)goLevelSelection{
-    
-    [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
     [self resetDatabase];
-    
     [SceneManager goChallengeLevelSelect];
 }
 
--(void)goStore{
-    [SceneManager goGameStore];
-}
 
+-(void)pauseDelegate {
+    if([delegate respondsToSelector:@selector(pauseLayerDidPause)]) {
+       [delegate pauseLayerDidPause];
+    }
 
--(void)pauseDelegate
-
-{
-    
-    if([delegate respondsToSelector:@selector(pauseLayerDidPause)])
-        
-        [delegate pauseLayerDidPause];
-    
     [delegate onExit];
-    
     [delegate.parent addChild:self z:10];
-    
 }
 
--(void)doResume: (id)sender
-
-{
-    
+-(void)doResume:(id)sender {
     [delegate onEnter];
-    
-    if([delegate respondsToSelector:@selector(pauseLayerDidUnpause)])
-        
-        [delegate pauseLayerDidUnpause];
+    if([delegate respondsToSelector:@selector(pauseLayerDidUnpause)]) {
+    	[delegate pauseLayerDidUnpause];
+    }
     
     [self.parent removeChild:self cleanup:YES];
-    
 }
 
--(void)dealloc
-
-{
-    
+-(void)dealloc {
     [super dealloc];
-    
 }
 
 @end

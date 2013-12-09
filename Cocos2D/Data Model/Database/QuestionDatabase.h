@@ -17,7 +17,7 @@
 
 + (QuestionDatabase*)database;
 - (QuestionDetails *)questionDetails:(int)uniqueId;
-- (NSMutableArray*)quizQuestionDetails;
+//- (NSMutableArray*)quizQuestionDetails;
 
 
 @end

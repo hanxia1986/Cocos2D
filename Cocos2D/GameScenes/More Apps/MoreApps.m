@@ -38,7 +38,7 @@
 }
 
 
-//设置视觉元素位置
+//set location
 -(void)setMenuLocation{
     
     CGSize screenSize = [CCDirector sharedDirector].winSize;
@@ -58,12 +58,12 @@
     [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.5],[CCCallFunc actionWithTarget:self selector:@selector(backToStart)] ,nil]];
 }
 
-//返回游戏开始界面
+//back to start scene
 -(void)backToStart {
     [SceneManager goStartGame];
 }
 
-//添加返回按钮
+//add back button
 -(void)addBackItem {
     backButton = [CCMenuItemImage itemWithNormalImage:@"button_back-ipad.png" selectedImage:nil target:self selector:@selector(backButtonPressed)];
     CCMenu *menuButton = [CCMenu menuWithItems:backButton,  nil];
@@ -71,7 +71,7 @@
     [self addChild:menuButton z:1];
 }
 
-//添加背景图片
+//add bg
 -(void)addBg {
     CGSize size = [CCDirector sharedDirector].winSize;
     bg = [CCSprite spriteWithFile:@"bg_common-ipad.png"];
@@ -80,8 +80,7 @@
 }
 
 
-//icon
-
+//add icon
 -(void)addIconsForOtherApps{
     
     CGSize screenSize = [CCDirector sharedDirector].winSize;
@@ -107,20 +106,14 @@
     
     CCMenuItemImage *appLinked = (CCMenuItemImage*)sender;
     int linkedAppIndex = appLinked.tag;
-    
     if(linkedAppIndex == kAppSoundToys){
-        
-//        NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=592992159&mt=8"];
         NSURL *url = [NSURL URLWithString:@"http://blog.sina.com.cn/eseedo"];
-        
         [[UIApplication sharedApplication] openURL:url];
     }
     
 }
 
-//场景初始化
-
-
+//init
 -(id)init {
     if((self = [super init])){
         [self setMenuLocation];

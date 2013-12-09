@@ -11,13 +11,13 @@
 
 @implementation QuestionDatabase
 
-static QuestionDatabase *_database;
+static QuestionDatabase *database;
 
 + (QuestionDatabase*)database {
-  if (_database == nil) {
-    _database = [[QuestionDatabase alloc] init];
+  if (database == nil) {
+    database = [[QuestionDatabase alloc] init];
   }
-  return _database;
+  return database;
 }
 
 - (id)init {
@@ -36,6 +36,8 @@ static QuestionDatabase *_database;
   [super dealloc];
 }
 
+
+/*
 - (NSMutableArray*)quizQuestionDetails{
     
     NSMutableArray *retval = [[[NSMutableArray alloc] init] autorelease];
@@ -70,6 +72,7 @@ static QuestionDatabase *_database;
     return retval;
 
 }
+ */
 
 - (QuestionDetails *)questionDetails:(int)uniqueId {
   QuestionDetails *retval = nil;
