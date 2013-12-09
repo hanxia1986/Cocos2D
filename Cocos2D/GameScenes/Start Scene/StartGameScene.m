@@ -68,7 +68,7 @@
 }
 
 - (void)moreItemClick {
-
+    [SceneManager goMoreApps];
 }
 
 - (void)aboutItemClick {

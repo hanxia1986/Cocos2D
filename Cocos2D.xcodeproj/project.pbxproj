@@ -23,6 +23,7 @@
 		9A5F075F184C5A9F00D8059B /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075C184C5A9F00D8059B /* Player.png */; };
 		9A5F0760184C5AA000D8059B /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075D184C5A9F00D8059B /* Projectile.png */; };
 		9A5F0761184C5AA000D8059B /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5F075E184C5A9F00D8059B /* Target.png */; };
+		9A85C0321855548E005A885C /* MoreApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A85C0311855548E005A885C /* MoreApps.m */; };
 		9AB85E4A184C143F0015D1C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB85E49184C143F0015D1C4 /* QuartzCore.framework */; };
 		9AB85E4C184C143F0015D1C4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB85E4B184C143F0015D1C4 /* OpenGLES.framework */; };
 		9AB85E4E184C143F0015D1C4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB85E4D184C143F0015D1C4 /* OpenAL.framework */; };
@@ -285,6 +286,8 @@
 		9A5F075C184C5A9F00D8059B /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
 		9A5F075D184C5A9F00D8059B /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
 		9A5F075E184C5A9F00D8059B /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
+		9A85C0301855548E005A885C /* MoreApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreApps.h; sourceTree = "<group>"; };
+		9A85C0311855548E005A885C /* MoreApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreApps.m; sourceTree = "<group>"; };
 		9AB85E46184C143F0015D1C4 /* Cocos2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB85E49184C143F0015D1C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9AB85E4B184C143F0015D1C4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -684,6 +687,7 @@
 		9A22445218517AD500C9BA41 /* GameScenes */ = {
 			isa = PBXGroup;
 			children = (
+				9A85C02F1855548E005A885C /* More Apps */,
 				9A2244861851B54B00C9BA41 /* Level Result */,
 				9A22446A18517D9B00C9BA41 /* Challenge Mode Game Scene */,
 				9A22445318517AD500C9BA41 /* About Scene */,
@@ -833,6 +837,15 @@
 			);
 			name = game;
 			path = Resources/game;
+			sourceTree = "<group>";
+		};
+		9A85C02F1855548E005A885C /* More Apps */ = {
+			isa = PBXGroup;
+			children = (
+				9A85C0301855548E005A885C /* MoreApps.h */,
+				9A85C0311855548E005A885C /* MoreApps.m */,
+			);
+			path = "More Apps";
 			sourceTree = "<group>";
 		};
 		9AB85E3D184C143F0015D1C4 = {
@@ -1644,6 +1657,7 @@
 				9AB85EC0184C143F0015D1C4 /* CCFontDefinition.m in Sources */,
 				9AB85F00184C14400015D1C4 /* CCPhysicsSprite.mm in Sources */,
 				9AB85FE4184C14410015D1C4 /* vec2.c in Sources */,
+				9A85C0321855548E005A885C /* MoreApps.m in Sources */,
 				9AB85FD4184C14410015D1C4 /* matrix.c in Sources */,
 				9A22446718517B3F00C9BA41 /* AppDelegate.m in Sources */,
 				9A224479185182F200C9BA41 /* ChallengeGameScene.m in Sources */,

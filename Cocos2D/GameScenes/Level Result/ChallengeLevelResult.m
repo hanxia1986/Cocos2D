@@ -282,34 +282,20 @@
 }
 
 //返回关卡选择界面
-
--(void)backToLevelSelection{
-    [self stopBackgroundMusic];
-    
+-(void)backToLevelSelection {
     [SceneManager goChallengeLevelSelect];
-    
 }
 
 //重玩当前关卡
--(void)replayCurrentLevel{
-    
-    [self stopBackgroundMusic];
+-(void)replayCurrentLevel {
     //根据关卡编号的进入不同关卡场景
-    
-    
     [GameData sharedData].selectedLevel =levelNumber;
-    
     [SceneManager goChallengeGameScene];
-    
-    
 }
 
 //进入下一个关卡
--(void)playNextLevel{
-    
-    [self stopBackgroundMusic];
+-(void)playNextLevel {
     GameData *gamedata =[GameData sharedData];
-    
     //判断是否下一个关卡已解锁
     if(levelClear ==YES && gamedata.selectedLevel < 5)
     {

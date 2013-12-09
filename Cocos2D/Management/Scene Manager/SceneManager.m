@@ -16,7 +16,7 @@
 //#import "GameSetting.h"
 //#import "GameHelp.h"
 #import "AboutUs.h"
-//#import "MoreApps.h"
+#import "MoreApps.h"
 #import "ChallengeLevelSelection.h"
 #import "ChallengeGameScene.h"
 #import "ChallengeLevelResult.h"
@@ -75,7 +75,9 @@
     [SceneManager go:[ChallengeLevelResult node]];
 }
 
-
++(void) goMoreApps {
+    [SceneManager go:[MoreApps node]];
+}
 +(CCScene *) wrap: (CCLayer *) layer {
     CCScene *newScene = [CCScene node];
     [newScene addChild: layer];
