@@ -148,7 +148,7 @@
     
 }
 
-//添加答案的底部框
+//add anwser munu bg
 -(void)addAnswerMenu {
     if(answerMenuItem1Selected == NO){
         possibleAnswer1MenuItem = [CCMenuItemImage itemWithNormalImage:@"answerInitialframe-ipad.png" selectedImage:nil target:self selector:@selector(answerMenuItem1Selected)];
@@ -231,7 +231,7 @@
 }
 
 
-//添加问题的底部框
+//add quiz bg
 -(void)addQuizFrame{
    CCSprite * quizFrame = [CCSprite spriteWithFile:@"quizframe-ipad.png"];
     quizFrame.position = quizFramePosition;
@@ -278,12 +278,6 @@
         [self updateCartoonAvatar];
         [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.5],[CCCallFunc actionWithTarget:self selector:@selector(gameLogic)] ,nil]];
     }
-    
-    
-    if(leftTimeForThisQuestion <=5){
-        
-    }
-    
     //如果剩余时间大于1，则进行以下处理
     if(leftTimeForThisQuestion >=1){
 
@@ -295,12 +289,6 @@
     }
    
 }
-
-
-
-
-
-
 
 #pragma mark- game data
 -(void)readGameData {
@@ -487,19 +475,14 @@
 }
 
 //游戏通用逻辑判断
--(void)gameLogic{
-    
+-(void)gameLogic {
     if(numberOfWrongAnswers > MaximumNumberOfWrongAnswer){
         //当前关卡失败，结束当前关卡
         CCLOG(@"当前关卡失败");
-        
         [self endGameScene:kEndReasonLose];
-        
-        
     }else if(numberOfAnsweredQuestions >= totalQuestionNumberOfCurrentLevel){
         //当前关卡通过，结束当前关卡
         CCLOG(@"当前关卡通过");
-        
         [self endGameScene:kEndReasonWin];
         
     }else {
@@ -516,82 +499,30 @@
 }
 
 //当前关卡结束
--(void)endGameScene:(EndReason)endReason{
-    
+-(void)endGameScene:(EndReason)endReason {
     if(endReason == kEndReasonWin){
         levelClear = YES;
-        
-        
-        
     }else{
         levelClear = NO;
-
     }
-    
     //保存当前关卡的相关结果
     [self saveGameData];
-    
-    
-    //切换到关卡结束界面
-    
-    if(levelNumber == 5 &&levelClear){
 
+    if(levelNumber == 5 &&levelClear) {
         [SceneManager goChallengeFinalResult];
     }else {
-        
-        //无论结果如何，需要让游戏延迟0.5秒钟，然后显示游戏结果
         [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:0.5],[CCCallFunc actionWithTarget:self selector:@selector(showLevelResult)] ,nil]];
     }
     
 }
 
 //切换到关卡结果界面
--(void)showLevelResult{
-    
+-(void)showLevelResult {
     [SceneManager gochallengeLevelResult];
-    
-
-    
 }
-
-//显示当前题目的反馈结果
--(void)showFeedbackOfCurrentQuestion{
-    
-    [self updateCartoonAvatar];
-    
-    if(isUserCorrect == YES){
-        //green circle
-        CCSprite *correctCircle = [CCSprite spriteWithFile:@"answercorrect-ipad.png"];
-            if(selectedAnswerIndex ==1){
-                correctCircle.position = answer1IndexLocation;
-            }else if(selectedAnswerIndex ==2){
-                correctCircle.position = answer2IndexLocation;
-            }else if(selectedAnswerIndex ==3){
-                correctCircle.position = answer3IndexLocation;
-            }
-        
-        [self addChild:correctCircle z:4];
-    }else if(isUserCorrect == NO){
-        //red circle
-        CCSprite *wrongCircle = [CCSprite spriteWithFile:@"answerwrong-ipad.png"];
-        
-        if(selectedAnswerIndex ==1){
-            wrongCircle.position = answer1IndexLocation;
-        }else if(selectedAnswerIndex ==2){
-            wrongCircle.position = answer2IndexLocation;
-        }else if(selectedAnswerIndex ==3){
-            wrongCircle.position = answer3IndexLocation;
-        }
-        [self addChild:wrongCircle z:4];
-    }
-  
-    
-}
-
 
 //切换到下一题
 -(void)changeToNextQuestion{
-    
     currentQuestionIndex ++;
     
     //游戏数据保存
@@ -641,19 +572,6 @@
     }else if(numberOfWrongAnswers >=3){
         data.currentLevelStar = 0;
     }
-    
-    //无论关卡和章节编号是多少，先保存当前关卡的信息
-    //设置当前关卡是否通关
-    //设置当前关卡评价
-    //设置下一关卡解锁
-    //设置下一关卡
-    
-    //如果当前关卡编号不为5，则将下一关卡解锁
-   
-    //如果关卡编号是5，且已通关，则进入最终画面
-
-    
-    
 }
 
 
@@ -665,20 +583,16 @@
         [self readDatabase];
         [self loadQuestionDetails];
         [self loadAnswers];
-
         [self addBackground];
 
-        
-        //添加暂停按钮
         [self addPauseMenu];
         
-        //添加答案序号ABC
         [self addAnswerIndexLabel];
         
-        //添加答案的底部框
+        //add answer mune bg
         [self addAnswerMenu];
         
-        //添加问题的底部框
+        //add quiz mune bg
         [self addQuizFrame];
         
         //添加当前问题的序号

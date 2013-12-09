@@ -174,22 +174,6 @@ typedef enum {
     //玩家生命
     int userLife;
     
-    
-    //道具1- 叫兽的爱 的剩余数量
-    
-    int leftNumberOfGameProp1;
-    
-    //道具2- 空空的胸 的剩余数量
-    
-    int leftNumberOfGameProp2;
-    
-    //道具3- 戴三个表 的剩余数量
-    
-    int leftNumberOfGameProp3;
-    
-    //道具4- 女神凝望 的剩余数量（暂不启用）
-    int leftNumberOfGameProp4;
-    
     //所选答案的选项编号
     int selectedAnswerIndex;
     
@@ -200,12 +184,6 @@ typedef enum {
     
     //当前问题是否回答正确
     BOOL isUserCorrect;
-    
-    //是否使用了道具
-    BOOL isGameProp1Used;
-    BOOL isGameProp2Used;
-    BOOL isGameProp3Used;
-    BOOL isGameProp4Used;
     
     //已经回答的问题数量
     int numberOfAnsweredQuestions;
