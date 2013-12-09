@@ -488,14 +488,8 @@
     }else {
         //切换到下一题
         CCLOG(@"切换到第%d题",numberOfAnsweredQuestions+1);
-        
-        
         [self changeToNextQuestion];
-        
     }
-    
-    
-    
 }
 
 //当前关卡结束
@@ -536,11 +530,9 @@
     data.currentQuestionIndex = currentQuestionIndex;
     
     //更新道具数量
-    
     data.userLife = userLife;
     
     //重新加载当前界面
-    
     [SceneManager goChallengeGameScene];
 }
 
