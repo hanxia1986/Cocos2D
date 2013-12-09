@@ -37,43 +37,6 @@ static QuestionDatabase *database;
 }
 
 
-/*
-- (NSMutableArray*)quizQuestionDetails{
-    
-    NSMutableArray *retval = [[[NSMutableArray alloc] init] autorelease];
-    NSString *query = @"SELECT id, type, title, correctanswer, answer2,answer3 FROM questionlist ORDER BY id";
-    sqlite3_stmt *statement;
-    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
-        while (sqlite3_step(statement) == SQLITE_ROW) {
-            int uniqueId = sqlite3_column_int(statement, 0);
-            int type = sqlite3_column_int(statement, 1);
-            char *titleChars = (char *) sqlite3_column_text(statement, 2);
-            char *correctAnswerChars = (char *) sqlite3_column_text(statement, 3);
-            char *answer2Chars = (char *) sqlite3_column_text(statement, 4);
-            char *answer3Chars = (char *) sqlite3_column_text(statement, 5);
-            
-            
-            NSString *title = [[NSString alloc] initWithUTF8String:titleChars];
-            NSString *correctAnswer = [[NSString alloc] initWithUTF8String:correctAnswerChars];
-            NSString *answer2 = [[NSString alloc] initWithUTF8String:answer2Chars];
-            NSString *answer3 = [[NSString alloc] initWithUTF8String:answer3Chars];
-            
-            QuestionDetails *details = [[QuestionDetails alloc]initWithUniqueId:uniqueId type:type title:title correctAnswer:correctAnswer possibleAnswer2:answer2 possibleAnswer3:answer3];
-            [retval addObject:details];
-            
-            [title release];
-            [correctAnswer release];
-            [answer2 release];
-            [answer3 release];
-            [details release];
-        }
-        sqlite3_finalize(statement);
-    }
-    return retval;
-
-}
- */
-
 - (QuestionDetails *)questionDetails:(int)uniqueId {
   QuestionDetails *retval = nil;
   NSString *query = [NSString stringWithFormat:@"SELECT id, type, title, correctanswer, answer2,answer3 FROM questionlist WHERE id=%d", uniqueId];
